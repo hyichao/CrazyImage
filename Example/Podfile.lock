@@ -1,0 +1,16 @@
+PODS:
+  - CrazyImage (0.1.0)
+
+DEPENDENCIES:
+  - CrazyImage (from `../`)
+
+EXTERNAL SOURCES:
+  CrazyImage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CrazyImage: 2aa5f150315cbfcbb823afc2cb6b727afb36b1e4
+
+PODFILE CHECKSUM: 82e461956915b78edc460d380a481415adb758e5
+
+COCOAPODS: 1.0.1

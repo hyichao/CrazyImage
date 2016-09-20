@@ -1,0 +1,22 @@
+{
+  "name": "CrazyImage",
+  "version": "0.1.0",
+  "summary": "A short description of CrazyImage.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/CrazyImage",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Charlie Huang": "hyichao@foxmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/CrazyImage.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CrazyImage/Classes/**/*"
+}

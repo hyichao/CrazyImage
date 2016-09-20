@@ -1,0 +1,6 @@
+framework module CrazyImage {
+  umbrella header "CrazyImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_CrazyImage_Example {
+  umbrella header "Pods-CrazyImage_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
