@@ -18,9 +18,9 @@
  */
 
 // convert UIImage into char array, RGB 3 channels only
--(void)toCharRGBOneDimArray:(unsigned char*)array;
+-(unsigned char*)toCharRGBAOneDimArray;
 
-// convert UIImage into char array, RGBA 4
--(void)toCharRGBAOneDimArray:(unsigned char*)array;
+// convert UIImage into char array, RGBA 4 channels
+-(unsigned char*)toCharRGBOneDimArray
 
 @end

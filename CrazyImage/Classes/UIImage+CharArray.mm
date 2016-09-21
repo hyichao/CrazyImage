@@ -10,49 +10,31 @@
 
 @implementation UIImage(CharArray)
 
--(void)toCharRGBAOneDimArray:(unsigned char*)array
+-(unsigned char*)toCharRGBAOneDimArray
 {
-    CGImageRef imageRef = [self CGImage];
-    
-    NSUInteger width = CGImageGetWidth(imageRef);
-    NSUInteger height = CGImageGetHeight(imageRef);
-    
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    
-    array = (unsigned char*) calloc(height * width * 4, sizeof(unsigned char));
-    
-    NSUInteger bytesPerPixel = 4;
-    NSUInteger bytesPerRow = bytesPerPixel * width;
-    NSUInteger bitsPerComponent = 8;
-    
-    CGContextRef context = CGBitmapContextCreate(array, width, height, bitsPerComponent, bytesPerRow, colorSpace, kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-    
-    CGColorSpaceRelease(colorSpace);
-    
-    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
-    
-    CGContextRelease(context);
+    CFDataRef pixelData = CGDataProviderCopyData(CGImageGetDataProvider(self.CGImage));
+    unsigned char *rgbaData = (unsigned char *)CFDataGetBytePtr(pixelData);
+    return rgbaData;
 }
 
--(void)toCharRGBOneDimArray:(unsigned char*)array
+-(unsigned char*)toCharRGBOneDimArray
 {
-    CGImageRef imageRef = [self CGImage];
-    NSUInteger width = CGImageGetWidth(imageRef);
-    NSUInteger height = CGImageGetHeight(imageRef);
+    NSUInteger width = CGImageGetWidth(self.CGImage);
+    NSUInteger height = CGImageGetHeight(self.CGImage);
     
-    unsigned char* rgba = (unsigned char*) calloc(height * width * 4, sizeof(unsigned char));
-    [self toCharRGBAOneDimArray:rgba];
+    unsigned char* rgba = [self toCharRGBOneDimArray];
     
-    array = (unsigned char*) calloc(height * width * 3, sizeof(unsigned char));
+    unsigned char* rgb = (unsigned char*) calloc(height * width * 3, sizeof(unsigned char));
     
     /*
      convert 4 channels to 3 channel directly
      */
     for(int i=0; i<width*height; i++) {
-        array[i*3+0] = rgba[i*4+0];
-        array[i*3+1] = rgba[i*4+1];
-        array[i*3+2] = rgba[i*4+2];
+        rgb[i*3+0] = rgba[i*4+0];
+        rgb[i*3+1] = rgba[i*4+1];
+        rgb[i*3+2] = rgba[i*4+2];
     }
+    return rgb;
 }
 
 @end
