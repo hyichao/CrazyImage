@@ -64,6 +64,7 @@
 		BDE1A9E18DC8195DF530ADE43EDE5520 /* CrazyImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CrazyImage-umbrella.h"; sourceTree = "<group>"; };
 		C38876642A2DE7E2FDE39E675ACD3BDD /* Pods-CrazyImage_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CrazyImage_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBB000C52F4369EAED15A3A1097E7CAF /* Pods-CrazyImage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CrazyImage_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		CBF264721D9216E0009B7E37 /* CrazyImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrazyImage.h; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CFF6867DC130DC46964DFF8D38AB5251 /* Pods-CrazyImage_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CrazyImage_Tests-dummy.m"; sourceTree = "<group>"; };
 		E531A96172B4632064C98084C6A48073 /* Pods-CrazyImage_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CrazyImage_Example-dummy.m"; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 		B9608110B434EE3EBA62EDDC5EAFC4D7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CBF264721D9216E0009B7E37 /* CrazyImage.h */,
 				E6128FDC3C2C00BA92C6738498B92678 /* ScopeTimer.h */,
 				38060622796FFD8892E9326A49D576B8 /* ScopeTimer.mm */,
 				2C866AC0E9B8421459F93B3E75909092 /* UIImage+Buffer.h */,
