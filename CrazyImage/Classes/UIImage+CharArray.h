@@ -21,6 +21,6 @@
 -(unsigned char*)toCharRGBAOneDimArray;
 
 // convert UIImage into char array, RGBA 4 channels
--(unsigned char*)toCharRGBOneDimArray
+-(unsigned char*)toCharRGBOneDimArray;
 
 @end
