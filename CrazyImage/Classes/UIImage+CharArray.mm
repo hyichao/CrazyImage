@@ -19,8 +19,9 @@
 
 -(unsigned char*)toCharRGBOneDimArray
 {
-    NSUInteger width = CGImageGetWidth(self.CGImage);
-    NSUInteger height = CGImageGetHeight(self.CGImage);
+    CGImageRef imageRef = [self CGImage];
+    NSUInteger width = CGImageGetWidth(imageRef);
+    NSUInteger height = CGImageGetHeight(imageRef);
     
     unsigned char* rgba = [self toCharRGBOneDimArray];
     
@@ -34,7 +35,21 @@
         rgb[i*3+1] = rgba[i*4+1];
         rgb[i*3+2] = rgba[i*4+2];
     }
+    
     return rgb;
 }
+
++ (void)convertRGBA:(unsigned char*)rgba
+            intoRGB:(unsigned char*)rgb
+              width:(int)width
+             height:(int)height
+{
+    for(int i=0; i<width*height; i++) {
+        rgb[i*3+0] = rgba[i*4+0];
+        rgb[i*3+1] = rgba[i*4+1];
+        rgb[i*3+2] = rgba[i*4+2];
+    }
+}
+
 
 @end
