@@ -14,30 +14,35 @@
 +(UIImage*)fromCMSampleBuffer:(CMSampleBufferRef)buffer
 {
     return [UIImage fromCMSampleBuffer:buffer
-                                 scale:1.0];
+                                 scale:1.0
+                           orientation:0];
 }
 
 +(UIImage*)fromCMSampleBuffer:(CMSampleBufferRef)buffer
                         scale:(CGFloat)scale
+                  orientation:(int)orientation
 {
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(buffer);
     return [UIImage fromCVPixelBuffer:pixelBuffer
-                                scale:scale];
+                                scale:scale
+                          orientation:orientation];
 }
 
 #pragma mark - From CVPixelBuffer
 +(UIImage*)fromCVPixelBuffer:(CVPixelBufferRef)buffer
 {
     return [UIImage fromCVPixelBuffer:buffer
-                                scale:1.0];
+                                scale:1.0
+                          orientation:0];
 }
 
 +(UIImage*)fromCVPixelBuffer:(CVPixelBufferRef)buffer
                        scale:(CGFloat)scale
+                 orientation:(int)orientation
 {
     CIImage *ciImage = [CIImage imageWithCVPixelBuffer:buffer];
-    //TODO. make it adapative
-    ciImage = [ciImage imageByApplyingOrientation:5];
+    
+    ciImage = [ciImage imageByApplyingOrientation:orientation];
     ciImage = [ciImage imageByApplyingTransform:CGAffineTransformMakeScale(scale, scale)];
     CIContext *temporaryContext = [CIContext contextWithOptions:nil];
     

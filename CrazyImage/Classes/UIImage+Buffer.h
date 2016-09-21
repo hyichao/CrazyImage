@@ -17,11 +17,13 @@
 +(UIImage*)fromCMSampleBuffer:(CMSampleBufferRef)buffer;
 
 +(UIImage*)fromCMSampleBuffer:(CMSampleBufferRef)buffer
-                        scale:(CGFloat)scale;
+                        scale:(CGFloat)scale
+                  orientation:(int)orientation;
 
 +(UIImage*)fromCVPixelBuffer:(CVPixelBufferRef)buffer;
 
 +(UIImage*)fromCVPixelBuffer:(CVPixelBufferRef)buffer
-                       scale:(CGFloat)scale;
+                       scale:(CGFloat)scale
+                 orientation:(int)orientation;
 
 @end
