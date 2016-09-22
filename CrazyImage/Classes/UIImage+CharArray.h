@@ -19,12 +19,13 @@
 
 
 // convert UIImage into char array, RGBA 4 channels
--(unsigned char*)toCharRGBAOneDimArray;
-
+// Note: claim a variable "uchar* rgba" before using method.
+-(void)toCharRGBAOneDimArray:(unsigned char*)rgba;
 
 // TODO not working.
 // convert UIImage into char array, RGB 3 channels only
--(unsigned char*)toCharRGBOneDimArray;
+// Note: claim a variable "uchar* rgb" before using.
+-(void)toCharRGBOneDimArray:(unsigned char*)rgb;
 
 + (void)convertRGBA:(unsigned char*)rgba
             intoRGB:(unsigned char*)rgb

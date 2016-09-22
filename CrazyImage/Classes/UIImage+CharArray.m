@@ -10,22 +10,22 @@
 
 @implementation UIImage(CharArray)
 
--(unsigned char*)toCharRGBAOneDimArray
+-(void)toCharRGBAOneDimArray:(unsigned char*)rgba
 {
     CFDataRef pixelData = CGDataProviderCopyData(CGImageGetDataProvider(self.CGImage));
-    unsigned char *rgbaData = (unsigned char *)CFDataGetBytePtr(pixelData);
-    return rgbaData;
+    rgba = (unsigned char *)CFDataGetBytePtr(pixelData);
 }
 
--(unsigned char*)toCharRGBOneDimArray
+-(void)toCharRGBOneDimArray:(unsigned char*)rgb
 {
     CGImageRef imageRef = [self CGImage];
     NSUInteger width = CGImageGetWidth(imageRef);
     NSUInteger height = CGImageGetHeight(imageRef);
     
-    unsigned char* rgba = [self toCharRGBOneDimArray];
+    unsigned char* rgba;
+    [self toCharRGBAOneDimArray:rgba];
     
-    unsigned char* rgb = (unsigned char*) calloc(height * width * 3, sizeof(unsigned char));
+    rgb = (unsigned char*) calloc(height * width * 3, sizeof(unsigned char));
     
     /*
      convert 4 channels to 3 channel directly
@@ -35,8 +35,6 @@
         rgb[i*3+1] = rgba[i*4+1];
         rgb[i*3+2] = rgba[i*4+2];
     }
-    
-    return rgb;
 }
 
 + (void)convertRGBA:(unsigned char*)rgba

@@ -14,7 +14,7 @@
 		5AA0C53D53C7C0524B676353283DD7E9 /* ScopeTimer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38060622796FFD8892E9326A49D576B8 /* ScopeTimer.mm */; };
 		6C05865D899621ABBB3BEA3A1AB456F5 /* ScopeTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = E6128FDC3C2C00BA92C6738498B92678 /* ScopeTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7333E3556F4A5C21D5538FCB7B9535B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		89F090B0E0030603179ED9DFEE5B3135 /* UIImage+CharArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 175C0F2BE3E3FD8692B463300C2505E6 /* UIImage+CharArray.mm */; };
+		89F090B0E0030603179ED9DFEE5B3135 /* UIImage+CharArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 175C0F2BE3E3FD8692B463300C2505E6 /* UIImage+CharArray.m */; };
 		8CDE8C8E1A66917FAAB927A7CC03EA50 /* CrazyImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE1A9E18DC8195DF530ADE43EDE5520 /* CrazyImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1976A9B7463B957EF67EC5AB98EEA7B /* Pods-CrazyImage_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E531A96172B4632064C98084C6A48073 /* Pods-CrazyImage_Example-dummy.m */; };
 		A3BB8270467DD9B568ADE68AAA1F964A /* UIImage+CharArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A3887DC6125AB8ECB4044F01C4F7C2F /* UIImage+CharArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		14346CAACDD45FF30DE7A8D95AE64622 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		175C0F2BE3E3FD8692B463300C2505E6 /* UIImage+CharArray.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+CharArray.mm"; sourceTree = "<group>"; };
+		175C0F2BE3E3FD8692B463300C2505E6 /* UIImage+CharArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CharArray.m"; sourceTree = "<group>"; };
 		1D3A5C62E9EDC51B452C411735654424 /* Pods-CrazyImage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CrazyImage_Example.release.xcconfig"; sourceTree = "<group>"; };
 		21EF3AEB31B70626DED0CF4EA2383F88 /* Pods-CrazyImage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CrazyImage_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		271D9BCEAFFF990CF2F4123407DA0123 /* Pods-CrazyImage_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CrazyImage_Tests.modulemap"; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 				2C866AC0E9B8421459F93B3E75909092 /* UIImage+Buffer.h */,
 				5C0736A9AF17615F7E26C3B735A4733D /* UIImage+Buffer.m */,
 				6A3887DC6125AB8ECB4044F01C4F7C2F /* UIImage+CharArray.h */,
-				175C0F2BE3E3FD8692B463300C2505E6 /* UIImage+CharArray.mm */,
+				175C0F2BE3E3FD8692B463300C2505E6 /* UIImage+CharArray.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 				50802424CEF83D4A043C08C773965C93 /* CrazyImage-dummy.m in Sources */,
 				5AA0C53D53C7C0524B676353283DD7E9 /* ScopeTimer.mm in Sources */,
 				362FA7CDD214ADD40110562FDA46B216 /* UIImage+Buffer.m in Sources */,
-				89F090B0E0030603179ED9DFEE5B3135 /* UIImage+CharArray.mm in Sources */,
+				89F090B0E0030603179ED9DFEE5B3135 /* UIImage+CharArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
