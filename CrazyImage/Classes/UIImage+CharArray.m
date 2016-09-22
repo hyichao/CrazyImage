@@ -25,8 +25,6 @@
     unsigned char* rgba;
     [self toCharRGBAOneDimArray:rgba];
     
-    rgb = (unsigned char*) calloc(height * width * 3, sizeof(unsigned char));
-    
     /*
      convert 4 channels to 3 channel directly
      */
