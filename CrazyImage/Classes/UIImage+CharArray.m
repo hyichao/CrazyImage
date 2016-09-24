@@ -10,10 +10,30 @@
 
 @implementation UIImage(CharArray)
 
+//unsigned char *imageBytes = malloc(width * height * bytesPerPixel);
 -(void)toCharRGBAOneDimArray:(unsigned char*)rgba
 {
-    CFDataRef pixelData = CGDataProviderCopyData(CGImageGetDataProvider(self.CGImage));
-    rgba = (unsigned char *)CFDataGetBytePtr(pixelData);
+    CGImageRef imageRef = self.CGImage;
+    NSUInteger width = CGImageGetWidth(imageRef);
+    NSUInteger height = CGImageGetHeight(imageRef);
+    NSUInteger bytesPerPixel = 4;
+    NSUInteger bytesPerRow = bytesPerPixel * width;
+    NSUInteger bitsPerComponent = 8;
+    
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    
+    CGContextRef context = CGBitmapContextCreate(rgba,
+                                                 width,
+                                                 height,
+                                                 bitsPerComponent,
+                                                 bytesPerRow,
+                                                 colorspace,
+                                                 kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+    
+    CGRect rect = CGRectMake(0 , 0 , width , height);
+    CGContextDrawImage(context , rect ,imageRef);
+    CGColorSpaceRelease(colorspace);
+    CGContextRelease(context);
 }
 
 -(void)toCharRGBOneDimArray:(unsigned char*)rgb
