@@ -13,7 +13,4 @@
 #import "UIImage+Buffer.h"
 #import "UIImage+CharArray.h"
 
-//Tool
-#import "ScopeTimer.h"
-
 #endif /* CrazyImage_h */
